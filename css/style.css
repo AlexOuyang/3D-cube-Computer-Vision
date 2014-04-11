@@ -71,6 +71,8 @@ margin-top: 100px;
 }
 
 #cube .four {
+  -webkit-transform: rotateY(180deg) translateZ(200px);
+
   -moz-transform: rotateY(180deg) translateZ(200px);
 }
 
