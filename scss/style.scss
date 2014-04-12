@@ -1,41 +1,46 @@
+@import "compass/css3";
+
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 /*Main */
 /*------------------------------------------*/
-a {
-  color: white;
-  text-decoration: none;
-}
-a:hover {
-  color: black;
+a{
+  color:white; 
+  text-decoration:none;
+  &:hover{
+    color: black;
+  }
 }
 
-body {
-  font-family: 'Ubuntu', sans-serif;
-  background: #022121;
-  background-position: center center;
-  background-size: 100%;
+body {   
+
+  font-family: 'Ubuntu', sans-serif; background:#022121;
+  background-position:center center;
+  background-size:100%;
   color: #121212;
-}
-body h1 {
-  margin-top: 50px;
-  font-family: 'Arial Narrow', Arial, sans-serif;
-  letter-spacing: 1px;
-  font-weight: bold;
-  color: #fff;
-  font-size: 22px;
-  text-align: center;
-  text-shadow: 0px 0px 1px #F5F5F5;
-}
-body h1 span {
-  font-style: italic;
-  color: #555;
-  font-size: 20px;
+
+  h1{
+    margin-top:50px;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 1px;
+    font-weight:bold;
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    text-shadow: 0px 0px 1px #F5F5F5;
+
+    span{
+      font-style: italic;
+      color: #555;
+      font-size:20px;
+    }
+  }
+
 }
 
-img {
-  opacity: 0.5;
-  width: 100%;
-  height: 100%;
+img{
+  opacity:0.5;
+  width:100%;
+  height:100%;
 }
 
 .separator {
@@ -43,46 +48,45 @@ img {
 }
 
 /* top bar */
-.top {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 30px;
-  line-height: 24px;
-  font-size: 20px;
-  background: #000;
-  opacity: 0.8;
-  z-index: 20;
-  color: black;
+.top{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 30px;
+    line-height: 24px;
+    font-size: 20px;
+    background: #000;
+    opacity: 0.8;
+    z-index: 20;
+    color: black;
+  span{
+    color: black;
+    font-size: 15px;
 }
-.top span {
-  color: black;
-  font-size: 15px;
 }
-
-.top h1 {
-  position: absolute;
-  bottom: -10px;
-  left: 10px;
-  letter-spacing: 1px;
-  text-align: right;
-}
-.top h1 span {
-  color: white;
-  font-size: 15px;
+.top h1{
+    position:absolute;
+    bottom: -10px;
+    left: 10px;
+    letter-spacing: 1px;
+    text-align: right;
+    span{
+      color: white;
+      font-size: 15px;
+    }
 }
 
 /*construct the cube*/
 #experiment {
-  opacity: 0.8;
-  -webkit-perspective: 1400;
-  -moz-perspective: 1400;
-  /*-webkit-perspective-origin: 50% 400px;*/
+  opacity:0.8;
+  -webkit-perspective:1400;
+  -moz-perspective:1400;
+  /*-webkit-perspective-origin: 50% 400px;*/  
   -webkit-perspective-origin: 100px 400px;
+
   -moz-perspective-origin: 100px 400px;
 }
-
 /*set up the position and center of the cube*/
 #cube {
   position: relative;
@@ -94,7 +98,6 @@ img {
   -moz-transition: -moz-transform 1s linear;
   -moz-transform-style: preserve-3d;
 }
-
 .face {
   position: absolute;
   height: 360px;
@@ -104,32 +107,38 @@ img {
 }
 
 /*put each cube in the correct position*/
-#cube .one {
+#cube .one  {
   -webkit-transform: rotateX(90deg) translateZ(200px);
+
   -moz-transform: rotateX(90deg) translateZ(200px);
 }
 
 #cube .two {
   -webkit-transform: translateZ(200px);
+
   -moz-transform: translateZ(200px);
 }
 
 #cube .three {
   -webkit-transform: rotateY(90deg) translateZ(200px);
+
   -moz-transform: rotateY(90deg) translateZ(200px);
 }
 
 #cube .four {
   -webkit-transform: rotateY(180deg) translateZ(200px);
+
   -moz-transform: rotateY(180deg) translateZ(200px);
 }
 
 #cube .five {
   -webkit-transform: rotateY(-90deg) translateZ(200px);
+
   -moz-transform: rotateY(-90deg) translateZ(200px);
 }
 
 #cube .six {
   -webkit-transform: rotateX(-90deg) translateZ(200px) rotate(180deg);
+
   -moz-transform: rotateX(-90deg) translateZ(200px) rotate(180deg);
 }
